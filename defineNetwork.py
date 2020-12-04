@@ -4,8 +4,7 @@ import tensorflow as tf
 
 
 NUM_CLASSES = 102
-image_height = 299
-image_width = 299
+
 channels = 3
 
 IMAGE_RES = 229
@@ -13,7 +12,8 @@ IMAGE_RES = 229
 
 def get_model():
     model = tf.keras.applications.InceptionV3(include_top=True,weights=None,classes=NUM_CLASSES)
-    model.build(input_shape=(None, image_height, image_width, channels))
+    model.build(input_shape=(None, IMAGE_RES, IMAGE_RES, channels))
+
     model.summary() #prints model information
     return model
 
