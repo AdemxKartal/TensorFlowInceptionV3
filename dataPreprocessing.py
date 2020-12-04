@@ -5,7 +5,6 @@ import tensorflow_datasets as tfds
 
 
 ImageSize = 229
-#BatchSize=32
 BatchSize=32
 
 
